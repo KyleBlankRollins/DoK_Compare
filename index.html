@@ -1,98 +1,75 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="main.css">
-		<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab" rel="stylesheet">
-		<script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
 		<title>DoK Compare</title>
+        <meta charset="utf-8">
+        <meta name="description" content="DoK Compare">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+		<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway" rel="stylesheet">
+
+        <!-- Load font awesome icon library -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+        <!-- Vue.js development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 	</head>
-	
+
 	<body>
+        <section class="wrapper">
+            <header class="header">
+                <figure>
+                    <img src="images/kushanUnits/battle.jpg"/>
+                    <figcaption> <h1> DoK Compare </h1> </figcaption>
+                </figure>
+            </header>
 
-		<div class="wrapper">
-			<header class="main-head">
-				Title
-			</header>
-			
-			<div class="lName">
-				<div class="factionHeader" id="kushanHeader">
-					<div>
-						<h3 class="noMarginH3">Kushan</h3>
-					</div>
-					<div class="dropdown">
-						<button class="dropBtn" onclick="lDropMenu()">
-							Select vehicle
-						</button>
-						<div class="dropdown-content" id="lNameDrop">
-						  <a href="#">Vehicle 1</a>
-						  <a href="#">Vehicle 2</a>
-						  <a href="#">Vehicle 3</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="rName">
-				<div class="factionHeader" id="gaalsienHeader">
-					<div>
-						<h3 class="noMarginH3">Gaalsien</h3>
-					</div>
-					<div class="dropdown">
-						<button class="dropBtn" onclick="rDropMenu()">
-							Select vehicle
-						</button>
-						<div class="dropdown-content" id="rNameDrop">
-						  <a href="#">Vehicle 1</a>
-						  <a href="#">Vehicle 2</a>
-						  <a href="#">Vehicle 3</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<nav class="main-nav">
-				Main nav
-			</nav>
-			<div class="cLeft">
-				<p class="description">cLeft</p>
-			</div> 
-			
-			<div class="cRight">
-				<p class="description">cRight</p>
-			</div>
-			
-			<footer class="main-footer">
-				Main footer
-			</footer>
-		</div>
-		
-		<script>
-			/* When the user clicks on the button, 
-			toggle between hiding and showing the dropdown content */
-			function lDropMenu() {
-				var lNameDrop = document.getElementById("lNameDrop");
-				lNameDrop.style.display="block";
-			}
-			
-			function rDropMenu() {
-				var rNameDrop = document.getElementById("rNameDrop");
-				rNameDrop.style.display="block";
-			}
+            <main class="content">
+                <section class="gaalsien">
+                    <div class="factionTitle  gaalsienTitle">
+                        <h2>Gaalsien</h2>
+                    </div>
+                    <div class="unitSelect">
+                        <div id="gaalsienSelect">
+                            <transition name="fade" mode="out-in">
+                                <button class="unitButton" v-if="!show" @click="show = !show" key="menu">Select unit</button>
+                                <i class="material-icons clear" v-else @click="show = !show" key="clear">clear</i>
+                            </transition>
+                            <transition name="fade">
+                                <div class="unitGrid" v-if="show">
+                                    <div v-for="item in items"> {{ item }} </div>
+                                </div>
+                            </transition>
+                        </div>
+                    </div>
+                </section>
+                <section class="kushan">
+                    <div class="factionTitle  kushanTitle">
+                        <h2>Kushan</h2>
+                    </div>
+                    <div class="unitSelect">
+                        <div id="kushanSelect">
+                            <transition name="fade" mode="out-in">
+                                <button class="unitButton" v-if="!show" @click="show = !show" key="menu">Select unit</button>
+                                <i class="material-icons clear" v-else @click="show = !show" key="clear">clear</i>
+                            </transition>
+                            <transition name="fade">
+                                <div class="unitGrid" v-if="show">
+                                    <img v-for="image in images" :src="image.url" :alt="image.alt"> {{ image }} </img>
+                                </div>
+                            </transition>
+                        </div>
+                    </div>
+                </section>
+                <section class="unitCompare">
+                    Vue.js app here.
+                </section>
 
-			// Close the dropdown if the user clicks outside of it
-			window.onclick = function(e) {
-				var rNameDrop = document.getElementById("rNameDrop");
-				var lNameDrop = document.getElementById("lNameDrop");
-			    if (!e.target.matches('.dropBtn')) {
-				
-					if (lNameDrop.style.display="block"){
-						lNameDrop.style.display="none"
-					}
-					
-					if (rNameDrop.style.display="block"){
-						rNameDrop.style.display="none"
-					}
-				}
-			}
+            </main>
 
-		</script>
+      </section>
+
+        <!-- Link to local .js file -->
+        <script src="main.js"></script>
 	</body>
 </html>
