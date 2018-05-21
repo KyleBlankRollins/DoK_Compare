@@ -62,7 +62,21 @@
                     </div>
                 </section>
                 <section class="unitCompare">
-                    Vue.js app here.
+                    <div class="gaalsienCompare">
+                        <figure>
+                            <img src="images/kushanUnits/AAV_kushan.jpg"/>
+                            <figcaption> <h2> Kushan AAV </h2> </figcaption>
+                        </figure>
+                    </div>
+                    <div id="swapper">
+                        <div id="kushanCompare" :is="currentComponent">
+
+                        </div>
+                        <div v-show="!currentComponent" v-for="component in componentsArray">
+                          <button @click="swapComponent(component)">{{component}}</button>
+                        </div>
+                    </div>
+                    <button @click="swapComponent(null)">Close</button>
                 </section>
 
             </main>

@@ -121,6 +121,13 @@ h4 {
     padding: 0 0 0 10px;
 }
 
+    .kushanCompare > figure > img, .gaalsienCompare > figure > img {
+        width: 100%;
+        height: 100%;
+        max-height: 250px;
+        object-fit: cover;
+    }
+
 .unitSelect {
     padding: 5px;
 }
