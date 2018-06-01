@@ -31,15 +31,14 @@
                     </div>
                     <div class="unitSelect">
                         <div id="gaalsienSelect">
-                            <transition name="fade" mode="out-in">
-                                <button class="unitButton" v-if="!show" @click="show = !show" key="menu">Select unit</button>
-                                <i class="material-icons clear" v-else @click="show = !show" key="clear">clear</i>
-                            </transition>
-                            <transition name="fade">
-                                <div class="unitGrid" v-if="show">
-                                    <div v-for="item in items"> {{ item }} </div>
+                            <div class="unitGrid">
+                                <div v-for="component in componentsArray">
+                                  <button @click="swapComponent(component)">{{component}}</button>
                                 </div>
-                            </transition>
+                            </div>
+                            <div id="gaalsienCompare" :is="currentComponent">
+
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -49,41 +48,23 @@
                     </div>
                     <div class="unitSelect">
                         <div id="kushanSelect">
-                            <transition name="fade" mode="out-in">
-                                <button class="unitButton" v-if="!show" @click="show = !show" key="menu">Select unit</button>
-                                <i class="material-icons clear" v-else @click="show = !show" key="clear">clear</i>
-                            </transition>
-                            <transition name="fade">
-                                <div class="unitGrid" v-if="show">
-                                    <img v-for="image in images" :src="image.url" :alt="image.alt"> {{ image }} </img>
+                            <div class="unitGrid">
+                                <div v-for="component in componentsArray">
+                                  <button @click="swapComponent(component)">{{component}}</button>
                                 </div>
-                            </transition>
+                            </div>
+                            <div id="kushanCompare" :is="currentComponent">
+
+                            </div>
                         </div>
                     </div>
                 </section>
-                <section class="unitCompare">
-                    <div class="gaalsienCompare">
-                        <figure>
-                            <img src="images/kushanUnits/AAV_kushan.jpg"/>
-                            <figcaption> <h2> Kushan AAV </h2> </figcaption>
-                        </figure>
-                    </div>
-                    <div id="swapper">
-                        <div id="kushanCompare" :is="currentComponent">
-
-                        </div>
-                        <div v-show="!currentComponent" v-for="component in componentsArray">
-                          <button @click="swapComponent(component)">{{component}}</button>
-                        </div>
-                    </div>
-                    <button @click="swapComponent(null)">Close</button>
-                </section>
-
             </main>
-
-      </section>
+        </section>
 
         <!-- Link to local .js file -->
         <script src="main.js"></script>
 	</body>
 </html>
+
+<!-- Read for transitions: https://css-tricks.com/intro-to-vue-5-animations/ -->
