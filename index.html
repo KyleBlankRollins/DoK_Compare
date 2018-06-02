@@ -10,7 +10,7 @@
 
         <!-- Load font awesome icon library -->
         <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
-        <!-- Vue.js development version, includes helpful console warnings -->
+        <!-- Vue.js development version; includes helpful console warnings -->
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 	</head>
@@ -19,7 +19,7 @@
         <section class="wrapper">
             <header class="header">
                 <figure>
-                    <img src="images/kushanUnits/battle.jpg"/>
+                    <img src="images/coalitionUnits/battle.jpg"/>
                     <figcaption> <h1> DoK Compare </h1> </figcaption>
                 </figure>
             </header>
@@ -30,8 +30,8 @@
                         <h2>Gaalsien</h2>
                     </div>
                     <div class="unitSelect">
-                        <div id="gaalsienSelect">
-                            <div class="unitGrid">
+                        <div class="gaalsienSelect" id="gaalsienSelect">
+                            <div class="unitGrid" id="gaalsienUnitArray">
                                 <div v-for="component in componentsArray">
                                   <button @click="swapComponent(component)">{{component}}</button>
                                 </div>
@@ -42,18 +42,18 @@
                         </div>
                     </div>
                 </section>
-                <section class="kushan">
-                    <div class="factionTitle  kushanTitle">
-                        <h2>Kushan</h2>
+                <section class="coalition">
+                    <div class="factionTitle  ">
+                        <h2>Coalition</h2>
                     </div>
                     <div class="unitSelect">
-                        <div id="kushanSelect">
-                            <div class="unitGrid">
+                        <div class="coalitionSelect" id="coalitionSelect">
+                            <div class="unitGrid" id="coalitionUnitArray">
                                 <div v-for="component in componentsArray">
                                   <button @click="swapComponent(component)">{{component}}</button>
                                 </div>
                             </div>
-                            <div id="kushanCompare" :is="currentComponent">
+                            <div id="coalitionCompare" :is="currentComponent">
 
                             </div>
                         </div>

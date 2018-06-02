@@ -1,68 +1,68 @@
 new Vue({
-    el: '#kushanSelect',
+    el: '#coalitionSelect',
     data: {
-        currentComponent: null,
+        currentComponent: 'AAV',
         componentsArray: [
-            'AAV', 'ArtilleryCruiser', 'AssaultCruiser', 'Baserunner', 'Battlecruiser', 'Bomber', 'Carrier', 'Gunship', 'Interceptor', 'LAV', 'MissileBattery', 'Railgun', 'Salvager', 'SupportCruiser'
+            'AAV', 'ArtilleryCruiser', 'AssaultCruiser', 'Baserunner', 'BattleCruiser', 'Bomber', 'Carrier', 'Gunship', 'Interceptor', 'LAV', 'MissileBattery', 'Railgun', 'Salvager', 'SupportCruiser'
         ],
 
     },
     components: {
         'AAV': {
             template:
-            '<div class="kushanCompare" id="kushanCompare"> <figure> <img src="images/kushanUnits/LAV_kushan.jpg"/> <figcaption> <h2> Kushan LAV </h2> </figcaption> </figure> </div> '
+            '<div class="coalitionCompare" id="coalitionCompare"> <figure> <img src="images/coalitionUnits/AAV_coalition.jpg"/> <figcaption> <h2> Coalition AAV </h2> </figcaption> </figure> <div class="unitStats"> <div class="stat"><h4>Speed:</h4> <p>70</p></div> <div class="stat"><h4>Armor:</h4> <p>5</p></div> <div class="stat"><h4>Damage:</h4> <p>50</p></div> <div class="stat"><h4>Rate of Fire:</h4> <p>Very high</p></div> <div class="stat"><h4>Hull:</h4> <p>1050</p></div> <div class="stat"><h4>Strong vs:</h4> <p>Strikecraft</p></div> <div class="stat"><h4>Weak vs:</h4> <p>Railguns</p></div> </div> </div>'
         },
         'ArtilleryCruiser': {
             template:
-            '<div class="kushanCompare" id="kushanCompare"> <figure> <img src="images/kushanUnits/artilleryCruiser_kushan.jpg"/> <figcaption> <h2> Kushan artillery cruiser </h2> </figcaption> </figure> </div>'
+            '<div class="coalitionCompare" id="coalitionCompare"> <figure> <img src="images/coalitionUnits/artilleryCruiser_coalition.jpg"/> <figcaption> <h2> Coalition artillery cruiser </h2> </figcaption> </figure> </div>'
         },
         'AssaultCruiser': {
             template:
-            '<div class="kushanCompare" id="kushanCompare"> <figure> <img src="images/kushanUnits/assaultCruiser_kushan.jpg"/> <figcaption> <h2> Kushan assault cruiser </h2> </figcaption> </figure> </div>'
+            '<div class="coalitionCompare" id="coalitionCompare"> <figure> <img src="images/coalitionUnits/assaultCruiser_coalition.jpg"/> <figcaption> <h2> Coalition assault cruiser </h2> </figcaption> </figure> </div>'
         },
         'Baserunner': {
             template:
-            '<div class="kushanCompare" id="kushanCompare"> <figure> <img src="images/kushanUnits/baserunner_kushan.jpg"/> <figcaption> <h2> Kushan baserunner </h2> </figcaption> </figure> </div>'
+            '<div class="coalitionCompare" id="coalitionCompare"> <figure> <img src="images/coalitionUnits/baserunner_coalition.jpg"/> <figcaption> <h2> Coalition baserunner </h2> </figcaption> </figure> </div>'
         },
-        'Battlecruiser': {
+        'BattleCruiser': {
             template:
-            '<div class="kushanCompare" id="kushanCompare"> <figure> <img src="images/kushanUnits/battlecruiser_kushan.jpg"/> <figcaption> <h2> Kushan battlecruiser </h2> </figcaption> </figure> </div>'
+            '<div class="coalitionCompare" id="coalitionCompare"> <figure> <img src="images/coalitionUnits/battleCruiser_coalition.jpg"/> <figcaption> <h2> Coalition battleCruiser </h2> </figcaption> </figure> </div>'
         },
         'Bomber': {
             template:
-            '<div class="kushanCompare" id="kushanCompare"> <figure> <img src="images/kushanUnits/bomber_kushan.jpg"/> <figcaption> <h2> Kushan bomber </h2> </figcaption> </figure> </div>'
+            '<div class="coalitionCompare" id="coalitionCompare"> <figure> <img src="images/coalitionUnits/bomber_coalition.jpg"/> <figcaption> <h2> Coalition bomber </h2> </figcaption> </figure> </div>'
         },
         'Carrier': {
             template:
-            '<div class="kushanCompare" id="kushanCompare"> <figure> <img src="images/kushanUnits/carrier_kushan.jpg"/> <figcaption> <h2> Kushan carrier </h2> </figcaption> </figure> </div>'
+            '<div class="coalitionCompare" id="coalitionCompare"> <figure> <img src="images/coalitionUnits/carrier_coalition.jpg"/> <figcaption> <h2> Coalition carrier </h2> </figcaption> </figure> </div>'
         },
         'Gunship': {
             template:
-            '<div class="kushanCompare" id="kushanCompare"> <figure> <img src="images/kushanUnits/gunship_kushan.jpg"/> <figcaption> <h2> Kushan gunship </h2> </figcaption> </figure> </div>'
+            '<div class="coalitionCompare" id="coalitionCompare"> <figure> <img src="images/coalitionUnits/gunship_coalition.jpg"/> <figcaption> <h2> Coalition gunship </h2> </figcaption> </figure> </div>'
         },
         'Interceptor': {
             template:
-            '<div class="kushanCompare" id="kushanCompare"> <figure> <img src="images/kushanUnits/interceptor_kushan.jpg"/> <figcaption> <h2> Kushan interceptor </h2> </figcaption> </figure> </div>'
+            '<div class="coalitionCompare" id="coalitionCompare"> <figure> <img src="images/coalitionUnits/interceptor_coalition.jpg"/> <figcaption> <h2> Coalition interceptor </h2> </figcaption> </figure> </div>'
         },
         'LAV': {
             template:
-            '<div class="kushanCompare" id="kushanCompare"> <figure> <img src="images/kushanUnits/LAV_kushan.jpg"/> <figcaption> <h2> Kushan LAV </h2> </figcaption> </figure> </div>'
+            '<div class="coalitionCompare" id="coalitionCompare"> <figure> <img src="images/coalitionUnits/LAV_coalition.jpg"/> <figcaption> <h2> Coalition LAV </h2> </figcaption> </figure> </div>'
         },
         'MissileBattery': {
             template:
-            '<div class="kushanCompare" id="kushanCompare"> <figure> <img src="images/kushanUnits/missileBattery_kushan.jpg"/> <figcaption> <h2> Kushan missile battery </h2> </figcaption> </figure> </div>'
+            '<div class="coalitionCompare" id="coalitionCompare"> <figure> <img src="images/coalitionUnits/missileBattery_coalition.jpg"/> <figcaption> <h2> Coalition missile battery </h2> </figcaption> </figure> </div>'
         },
         'Railgun': {
             template:
-            '<div class="kushanCompare" id="kushanCompare"> <figure> <img src="images/kushanUnits/railgun_kushan.jpg"/> <figcaption> <h2> Kushan railgun </h2> </figcaption> </figure> </div>'
+            '<div class="coalitionCompare" id="coalitionCompare"> <figure> <img src="images/coalitionUnits/railgun_coalition.jpg"/> <figcaption> <h2> Coalition railgun </h2> </figcaption> </figure> </div>'
         },
         'Salvager': {
             template:
-            '<div class="kushanCompare" id="kushanCompare"> <figure> <img src="images/kushanUnits/salvager_kushan.jpg"/> <figcaption> <h2> Kushan salvager </h2> </figcaption> </figure> </div>'
+            '<div class="coalitionCompare" id="coalitionCompare"> <figure> <img src="images/coalitionUnits/salvager_coalition.jpg"/> <figcaption> <h2> Coalition salvager </h2> </figcaption> </figure> </div>'
         },
         'SupportCruiser': {
             template:
-            '<div class="kushanCompare" id="kushanCompare"> <figure> <img src="images/kushanUnits/supportCruiser_kushan.jpg"/> <figcaption> <h2> Kushan support cruiser </h2> </figcaption> </figure> </div>'
+            '<div class="coalitionCompare" id="coalitionCompare"> <figure> <img src="images/coalitionUnits/supportCruiser_coalition.jpg"/> <figcaption> <h2> Coalition support cruiser </h2> </figcaption> </figure> </div>'
         },
     },
     methods: {
@@ -79,68 +79,68 @@ new Vue({
 new Vue({
     el: '#gaalsienSelect',
     data: {
-        currentComponent: null,
+        currentComponent: 'AAV',
         componentsArray: [
-            'AAV', 'ArtilleryCruiser', 'AssaultCruiser', 'Baserunner', 'Battlecruiser', 'Bomber', 'Carrier', 'Gunship', 'Interceptor', 'LAV', 'MissileBattery', 'Railgun', 'Salvager', 'SupportCruiser'
+            'AAV', 'ArtilleryCruiser', 'AssaultCruiser', 'Baserunner', 'BattleCruiser', 'Bomber', 'Carrier', 'Gunship', 'Interceptor', 'LAV', 'MissileBattery', 'Railgun', 'Salvager', 'SupportCruiser'
         ],
 
     },
     components: {
         'AAV': {
             template:
-            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/kushanUnits/LAV_kushan.jpg"/> <figcaption> <h2> Kushan LAV </h2> </figcaption> </figure> </div> '
+            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/coalitionUnits/AAV_coalition.jpg"/> <figcaption> <h2> coalition AAV </h2> </figcaption> </figure> </div> '
         },
         'ArtilleryCruiser': {
             template:
-            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/kushanUnits/artilleryCruiser_kushan.jpg"/> <figcaption> <h2> Kushan artillery cruiser </h2> </figcaption> </figure> </div>'
+            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/coalitionUnits/artilleryCruiser_coalition.jpg"/> <figcaption> <h2> coalition artillery cruiser </h2> </figcaption> </figure> </div>'
         },
         'AssaultCruiser': {
             template:
-            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/kushanUnits/assaultCruiser_kushan.jpg"/> <figcaption> <h2> Kushan assault cruiser </h2> </figcaption> </figure> </div>'
+            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/coalitionUnits/assaultCruiser_coalition.jpg"/> <figcaption> <h2> coalition assault cruiser </h2> </figcaption> </figure> </div>'
         },
         'Baserunner': {
             template:
-            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/kushanUnits/baserunner_kushan.jpg"/> <figcaption> <h2> Kushan baserunner </h2> </figcaption> </figure> </div>'
+            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/coalitionUnits/baserunner_coalition.jpg"/> <figcaption> <h2> coalition baserunner </h2> </figcaption> </figure> </div>'
         },
-        'Battlecruiser': {
+        'BattleCruiser': {
             template:
-            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/kushanUnits/battlecruiser_kushan.jpg"/> <figcaption> <h2> Kushan battlecruiser </h2> </figcaption> </figure> </div>'
+            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/coalitionUnits/battleCruiser_coalition.jpg"/> <figcaption> <h2> coalition battleCruiser </h2> </figcaption> </figure> </div>'
         },
         'Bomber': {
             template:
-            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/kushanUnits/bomber_kushan.jpg"/> <figcaption> <h2> Kushan bomber </h2> </figcaption> </figure> </div>'
+            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/coalitionUnits/bomber_coalition.jpg"/> <figcaption> <h2> coalition bomber </h2> </figcaption> </figure> </div>'
         },
         'Carrier': {
             template:
-            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/kushanUnits/carrier_kushan.jpg"/> <figcaption> <h2> Kushan carrier </h2> </figcaption> </figure> </div>'
+            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/coalitionUnits/carrier_coalition.jpg"/> <figcaption> <h2> coalition carrier </h2> </figcaption> </figure> </div>'
         },
         'Gunship': {
             template:
-            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/kushanUnits/gunship_kushan.jpg"/> <figcaption> <h2> Kushan gunship </h2> </figcaption> </figure> </div>'
+            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/coalitionUnits/gunship_coalition.jpg"/> <figcaption> <h2> coalition gunship </h2> </figcaption> </figure> </div>'
         },
         'Interceptor': {
             template:
-            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/kushanUnits/interceptor_kushan.jpg"/> <figcaption> <h2> Kushan interceptor </h2> </figcaption> </figure> </div>'
+            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/coalitionUnits/interceptor_coalition.jpg"/> <figcaption> <h2> coalition interceptor </h2> </figcaption> </figure> </div>'
         },
         'LAV': {
             template:
-            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/kushanUnits/LAV_kushan.jpg"/> <figcaption> <h2> Kushan LAV </h2> </figcaption> </figure> </div>'
+            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/coalitionUnits/LAV_coalition.jpg"/> <figcaption> <h2> coalition LAV </h2> </figcaption> </figure> </div>'
         },
         'MissileBattery': {
             template:
-            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/kushanUnits/missileBattery_kushan.jpg"/> <figcaption> <h2> Kushan missile battery </h2> </figcaption> </figure> </div>'
+            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/coalitionUnits/missileBattery_coalition.jpg"/> <figcaption> <h2> coalition missile battery </h2> </figcaption> </figure> </div>'
         },
         'Railgun': {
             template:
-            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/kushanUnits/railgun_kushan.jpg"/> <figcaption> <h2> Kushan railgun </h2> </figcaption> </figure> </div>'
+            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/coalitionUnits/railgun_coalition.jpg"/> <figcaption> <h2> coalition railgun </h2> </figcaption> </figure> </div>'
         },
         'Salvager': {
             template:
-            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/kushanUnits/salvager_kushan.jpg"/> <figcaption> <h2> Kushan salvager </h2> </figcaption> </figure> </div>'
+            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/coalitionUnits/salvager_coalition.jpg"/> <figcaption> <h2> coalition salvager </h2> </figcaption> </figure> </div>'
         },
         'SupportCruiser': {
             template:
-            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/kushanUnits/supportCruiser_kushan.jpg"/> <figcaption> <h2> Kushan support cruiser </h2> </figcaption> </figure> </div>'
+            '<div class="gaalsienCompare" id="gaalsienCompare"> <figure> <img src="images/coalitionUnits/supportCruiser_coalition.jpg"/> <figcaption> <h2> coalition support cruiser </h2> </figcaption> </figure> </div>'
         },
     },
     methods: {
@@ -156,19 +156,19 @@ new Vue({
 
 
 // images: [
-//     { url: 'images/kushanUnits/AAV_kushan.jpg', alt: 'Kushan AAV' },
-//     { url: 'images/kushanUnits/artilleryCruiser_kushan.jpg', alt: 'Kushan artillery cruiser' },
-//     { url: 'images/kushanUnits/assaultCruiser_kushan.jpg', alt: 'Kushan assault cruiser' },
-//     { url: 'images/kushanUnits/baserunner_kushan.jpg', alt: 'Kushan baserunner' },
-//     { url: 'images/kushanUnits/battlecruiser_kushan.jpg', alt: 'Kushan battlecruiser' },
-//     { url: 'images/kushanUnits/bomber_kushan.jpg', alt: 'Kushan tactical bomber'  },
-//     { url: 'images/kushanUnits/carrier_kushan.jpg', alt: 'Kushan carrier'  },
-//     { url: 'images/kushanUnits/gunship_kushan.jpg', alt: 'Kushan gunship'  },
-//     { url: 'images/kushanUnits/interceptor_kushan.jpg', alt: 'Kushan interceptor'  },
-//     { url: 'images/kushanUnits/LAV_kushan.jpg', alt: 'Kushan LAV'  },
-//     { url: 'images/kushanUnits/missileBattery_kushan.jpg', alt: 'Kushan missile battery'  },
-//     { url: 'images/kushanUnits/railgun_kushan.jpg', alt: 'Kushan railgun'  },
-//     { url: 'images/kushanUnits/salvager_kushan.jpg', alt: 'Kushan salvager'  },
-//     { url: 'images/kushanUnits/supportCruiser_kushan.jpg', alt: 'Kushan support cruiser'  }
+//     { url: 'images/coalitionUnits/AAV_coalition.jpg', alt: 'coalition AAV' },
+//     { url: 'images/coalitionUnits/artilleryCruiser_coalition.jpg', alt: 'coalition artillery cruiser' },
+//     { url: 'images/coalitionUnits/assaultCruiser_coalition.jpg', alt: 'coalition assault cruiser' },
+//     { url: 'images/coalitionUnits/baserunner_coalition.jpg', alt: 'coalition baserunner' },
+//     { url: 'images/coalitionUnits/battleCruiser_coalition.jpg', alt: 'coalition battleCruiser' },
+//     { url: 'images/coalitionUnits/bomber_coalition.jpg', alt: 'coalition tactical bomber'  },
+//     { url: 'images/coalitionUnits/carrier_coalition.jpg', alt: 'coalition carrier'  },
+//     { url: 'images/coalitionUnits/gunship_coalition.jpg', alt: 'coalition gunship'  },
+//     { url: 'images/coalitionUnits/interceptor_coalition.jpg', alt: 'coalition interceptor'  },
+//     { url: 'images/coalitionUnits/LAV_coalition.jpg', alt: 'coalition LAV'  },
+//     { url: 'images/coalitionUnits/missileBattery_coalition.jpg', alt: 'coalition missile battery'  },
+//     { url: 'images/coalitionUnits/railgun_coalition.jpg', alt: 'coalition railgun'  },
+//     { url: 'images/coalitionUnits/salvager_coalition.jpg', alt: 'coalition salvager'  },
+//     { url: 'images/coalitionUnits/supportCruiser_coalition.jpg', alt: 'coalition support cruiser'  }
 // ],
 // show: false,
