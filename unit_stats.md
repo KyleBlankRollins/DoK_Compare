@@ -30,7 +30,7 @@
     - Damage: 5
     - Rate of Fire: Medium
     - Hull: 3350
-    - Strong vs: None
+    - Strong vs: N/A
     - Weak vs: Everything
 + BattleCruiser
     - Speed: 50
@@ -70,7 +70,7 @@
     - Damage: 250
     - Rate of Fire: Low
     - Hull: 1800
-    - Strong vs: Air units
+    - Strong vs: Aircraft
     - Weak vs: Ground units
 + Railgun
     - Speed: 66
@@ -86,7 +86,7 @@
     - Damage: 0
     - Rate of Fire: N/A
     - Hull: 900
-    - Strong vs: None
+    - Strong vs: N/A
     - Weak vs: Everything
 + StrikeFighter
     - Speed: 435

@@ -78,15 +78,26 @@ h4 {
                 display: grid;
                 grid-gap: 10px;
                 grid-template-areas:
-                "coalitionCompare  coalitionUnitArray";
+                "coalitionUnitArray coalitionCompare";
             }
 
-                .unitStats {
+                .unitInfo {
                     display: grid;
                     flex-direction: row;
                     grid-gap: 5px;
-                    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                    grid-template-areas:
+                    "unitDescription unitDescription unitDescription"
+                    "stat            stat            stat"
+                    "stat            stat            stat";
                 }
+
+                    .unitStats {
+                        grid-area: stat;
+                        display: grid;
+                        flex-direction: row;
+                        grid-gap: 5px;
+                        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                    }
 
 .header {
     grid-area: header;
@@ -143,6 +154,10 @@ h4 {
         margin: 0;
     }
 
+    .coalitionCompare > figure > figcaption > h2, .gaalsienCompare > figure > figcaption > h2 {
+        margin: 0;
+    }
+
 .unitSelect {
     padding: 5px;
 }
@@ -188,6 +203,15 @@ h4 {
 
     #coalitionTitle {
         justify-content: flex-start;
+    }
+
+    .unitDescription {
+        grid-area: unitDescription;
+        background-color: #FFFFFF;
+    }
+
+    .stat {
+
     }
 
     .unitGrid > div > button {
