@@ -39,17 +39,15 @@ h4 {
         grid-area: content;
         display: grid;
         grid-template-areas:
-        "header"
-        "gaalsien"
-        "coalition"
-        "unitCompare";
+        "header header"
+        "gaalsien coalition";
     }
 
         .gaalsien {
             grid-area: gaalsien;
-            display: flex;
-            flex-direction: column;
-            margin: 10px;
+            background-color: #A07D7D;
+            margin: 5px;
+            padding: 0 10px 0 5px;
         }
 
             .unitGrid {
@@ -58,37 +56,12 @@ h4 {
                 flex-direction: column;
             }
 
-                .gaalsienSelect {
-                    display: grid;
-                    grid-gap: 10px;
-                    grid-template-areas:
-                    "gaalsienUnitArray  gaalsienCompare";
-                }
-
-        .coalition {
-            grid-area: coalition;
-            display: flex;
-            flex-direction: column;
-            margin: 10px;
-        }
-
-            /* .unitGrid also fills in here. */
-
-            .coalitionSelect {
-                display: grid;
-                grid-gap: 10px;
-                grid-template-areas:
-                "coalitionUnitArray coalitionCompare";
-            }
-
                 .unitInfo {
                     display: grid;
-                    flex-direction: row;
                     grid-gap: 5px;
                     grid-template-areas:
-                    "unitDescription unitDescription unitDescription"
-                    "stat            stat            stat"
-                    "stat            stat            stat";
+                    "unitDescription"
+                    "stat";
                 }
 
                     .unitStats {
@@ -124,86 +97,12 @@ h4 {
         padding: 0 10px 0 10px;
     }
 
-.gaalsien {
-    grid-area: gaalsien;
-    background-color: #A07D7D;
-    padding: 0 0 0 10px;
-    transition: width 1s ease-in-out;
+.unitInfo > figure > img {
+    width: 100%;
+    height: 100%;
+    max-height: 250px;
+    object-fit: cover;
 }
-
-.coalition {
-    grid-area: coalition;
-    background-color: #4B6060;
-    padding: 0 0 0 10px;
-}
-
-.unitCompare {
-    grid-area: unitCompare;
-    background-color: #AAC7AA;
-    padding: 0 0 0 10px;
-}
-
-    .coalitionCompare > figure > img, .gaalsienCompare > figure > img {
-        width: 100%;
-        height: 100%;
-        max-height: 250px;
-        object-fit: cover;
-    }
-
-    .coalitionCompare > figure, .gaalsienCompare > figure {
-        margin: 0;
-    }
-
-    .coalitionCompare > figure > figcaption > h2, .gaalsienCompare > figure > figcaption > h2 {
-        margin: 0;
-    }
-
-.unitSelect {
-    padding: 5px;
-}
-
-    .clear {
-      cursor: pointer;
-      font-size: 3em;
-      padding-left: 5%;
-      transition: all .3s ease;
-      width: 1.5em;
-    }
-
-    .unitButton {
-        font-size: 1.2em;
-        outline: none;
-    }
-
-    .fade-enter-active,
-    .fade-leave-active {
-      transition: opacity .3s ease;
-    }
-
-    .fade-enter,
-    .fade-leave-to {
-      opacity: 0;
-    }
-
-    #gaalsienUnitArray {
-        grid-area: gaalsienUnitArray;
-    }
-
-    #gaalsienCompare {
-        grid-area: gaalsienCompare;
-    }
-
-    #coalitionUnitArray {
-        grid-area: coalitionUnitArray;
-    }
-
-    #coalitionCompare {
-        grid-area:coalitionCompare;
-    }
-
-    #coalitionTitle {
-        justify-content: flex-start;
-    }
 
     .unitDescription {
         grid-area: unitDescription;
@@ -211,42 +110,95 @@ h4 {
     }
 
     .stat {
-
-    }
-
-    .unitGrid > div > button {
         display: flex;
-        align-items: center;
-        width: 100%;
-        cursor: pointer;
-        font-size: .9em;
+        flex-direction: column;
+        align-items: baseline;
         background-color: #FFFFFF;
         padding: 2px 4px 2px 4px;
         border: solid 1px #4a4a4a;
     }
 
-    .unitGrid > div > button:hover {
-        color: #FFFFFF;
-        background-color: #4a4a4a;
-    }
-
-    .unitGrid > div > button:focus {
-        color: #FFFFFF;
-        background-color: #4a4a4a;
-    }
-
-        .stat {
-            display: flex;
-            flex-direction: column;
-            align-items: baseline;
-            background-color: #FFFFFF;
-            padding: 2px 4px 2px 4px;
-            border: solid 1px #4a4a4a;
+        .stat h4, p {
+            font-size: .9em;
+            margin: 2px;
         }
 
-            .stat h4, p {
-                font-size: .9em;
-                margin: 2px;
+
+
+
+
+
+
+            /* Some boilerplating */
+            * { box-sizing: border-box; }
+
+            /* My dropdown */
+            .my-dropdown {
+              cursor: pointer;
+            }
+
+            /* Selected */
+            .selected {
+              position: relative;
+              z-index: 2;
+              display: block;
+              width: 100%;
+              height: 40px;
+              padding: 0 20px;
+              background: #054641;
+              border-radius: 10px;
+              font: 1.25rem/40px 'Ubuntu', Helvetica, Arial, sans-serif;
+              text-shadow: 2px 2px 0px #000;
+              color: #fff;
+            }
+
+            /* Arrow */
+            .selected:after {
+              opacity: 0.5;
+              display: inline-block;
+              margin-left: 10px;
+              content: '▼';
+            }
+
+            /* Hover state */
+            .selected:hover:after {
+              opacity: 1;
+            }
+
+            /* Options wrapper (toggled by isOpen) */
+            .options {
+              position: absolute;
+              z-index: 1;
+              margin-top: 3px;
+              background: #fff;
+              border-radius: 10px;
+            }
+
+            /* Option */
+            .option {
+              padding: 5px 20px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+              font: 1.2rem 'Vollkorn', Georgia, Times, serif;
+            }
+
+            /* Hover state */
+            .option:hover {
+              background-color: rgba(0, 0, 0, 0.05);
+            }
+
+            /* Reset last child for a nice layout */
+            .option:last-child {
+              border-bottom: none;
+            }
+
+            /* Transition */
+            .fade-enter-active, .fade-leave-active {
+              transition: all .25s ease-out;
+            }
+
+            .fade-enter, .fade-leave-active {
+              opacity: 0;
+            	transform: translateY(-30px);
             }
 
 /* http://paletton.com/#uid=7000u0k1Xqw4Fvi3tot56l+76k8 */

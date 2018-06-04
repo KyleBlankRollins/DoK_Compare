@@ -25,25 +25,16 @@
             </header>
 
             <main class="content">
-                <section class="gaalsien">
-                    <div class="factionTitle  gaalsienTitle">
-                        <h2>Gaalsien</h2>
-                    </div>
-                    <div class="unitSelect">
-                        <div class="gaalsienSelect" id="gaalsienSelect">
-                            <div class="unitGrid" id="gaalsienUnitArray">
-                                <div v-for="component in componentsArray">
-                                  <button @click="swapComponent(component)">{{component}}</button>
-                                </div>
-                            </div>
-                            <!-- Empty div that swapComponent() uses to dynamically change content. -->
-                            <div id="gaalsienCompare" :is="currentComponent">
-
-                            </div>
-                        </div>
-                    </div>
+                <section class="gaalsien" id="gaalsien">
+                    <select>
+                        <option disabled value="">Gaalsien units</option>
+                        <option v-for="component in componentsArray">
+                            <button @click="swapComponent(component)"> {{ component }} </button>
+                        </option>
+                    </select>
+                    <div class="unitSelect" id="unitSelect" :is="currentComponent"></div>
                 </section>
-                <section class="coalition">
+                <!-- <section class="coalition">
                     <div class="factionTitle  ">
                         <h2>Coalition</h2>
                     </div>
@@ -51,18 +42,102 @@
                         <div class="coalitionSelect" id="coalitionSelect">
                             <div class="unitGrid" id="coalitionUnitArray">
                                 <div v-for="component in componentsArray">
-                                  <button @click="swapComponent(component)">{{component}}</button>
+                                  <button @click="swapComponent(component)">{{ component }}</button>
                                 </div>
                             </div>
-                            <!-- Empty div that swapComponent() uses to dynamically change content. -->
-                            <div id="coalitionCompare" :is="currentComponent">
-
-                            </div>
+                            <div id="coalitionCompare" :is="currentComponent"></div>
                         </div>
                     </div>
-                </section>
+                </section> -->
             </main>
         </section>
+
+        <!-- Vue templates -->
+
+        <!-- Vue template for my-dropdown component. -->
+        <template id="gaalsien-dropdown">
+            <div class="my-dropdown">
+              <!-- On click we call the toggle method -->
+            <div class="selected" @click="toggle">Gaalsien units</div>
+              <div class="options" v-show="isOpen">
+               <!-- v-for loops trough `options` -->
+              <!-- and renders a div containing the `option`s value. -->
+                  <div class="option" v-for="option in options" @click="set(option)">
+                    {{ option }}
+                  </div>
+              </div>
+            </div>
+        </template>
+
+        <template id="aav">
+            <div class="unitInfo">
+                <figure>
+                    <img src="images/coalitionUnits/AAV_coalition.jpg"/>
+                    <figcaption> <h2> coalition AAV </h2> </figcaption>
+                </figure>
+                <div class="unitDescription" id="unitDescription">
+                    <p>This is a description</p>
+                </div>
+                <div class="unitStats">
+                    <div class="stat" id="aav_speed">
+                        <h4>Speed:</h4> <p>80</p>
+                    </div>
+                    <div class="stat" id="aav_armor">
+                        <h4>Armor:</h4> <p>8</p>
+                    </div>
+                    <div class="stat" id="aav_damage">
+                        <h4>Damage:</h4> <p>11</p>
+                    </div>
+                    <div class="stat" id="aav_RoF">
+                        <h4>Rate of Fire:</h4> <p>Very high</p>
+                    </div>
+                    <div class="stat" id="aav_hull">
+                        <h4>Hull:</h4> <p>1400</p>
+                    </div>
+                    <div class="stat" id="aav_strong">
+                        <h4>Strong vs:</h4> <p>Strikecraft</p>
+                    </div>
+                    <div class="stat" id="aav_weak">
+                        <h4>Weak vs:</h4> <p>Railguns, Cruisers</p>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="artillery-cruiser">
+            <div class="unitInfo">
+                <figure>
+                    <img src="images/coalitionUnits/artilleryCruiser_coalition.jpg"/>
+                    <figcaption> <h2> coalition artillery cruiser </h2> </figcaption>
+                </figure>
+                <div class="unitDescription" id="unitDescription">
+                    <p>This is a description</p>
+                </div>
+                <div class="unitStats">
+                    <div class="stat" id="arCruiser_speed">
+                        <h4>Speed:</h4> <p>50</p>
+                    </div>
+                    <div class="stat" id="arCruiser_armor">
+                        <h4>Armor:</h4> <p>5</p>
+                    </div>
+                    <div class="stat" id="arCruiser_damage">
+                        <h4>Damage:</h4> <p>100</p>
+                    </div>
+                    <div class="stat" id="aCruiser_RoF">
+                        <h4>Rate of Fire:</h4> <p>Low</p>
+                    </div>
+                    <div class="stat" id="arCruiser_hull">
+                        <h4>Hull:</h4> <p>2500</p>
+                    </div>
+                    <div class="stat" id="arCruiser_strong">
+                        <h4>Strong vs:</h4> <p>Ground</p>
+                    </div>
+                    <div class="stat" id="arCruiser_weak">
+                        <h4>Weak vs:</h4> <p>Strikecraft, Railguns</p>
+                    </div>
+                </div>
+            </div>
+        </template>
 
         <!-- Link to local .js file -->
         <script src="main.js"></script>
