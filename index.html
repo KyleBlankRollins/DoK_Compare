@@ -20,15 +20,15 @@
             <header class="header">
                 <figure>
                     <img src="images/coalitionUnits/battle.jpg"/>
-                    <figcaption> <h1> DoK Compare </h1> </figcaption>
+                    <figcaption> <h1 class="title"> DoK Compare </h1> </figcaption>
                 </figure>
             </header>
 
             <main class="content">
                 <section class="gaalsien" id="gaalsien">
                     <transition name="fade" mode="out-in">
-                        <i class="material-icons menu" v-if="!show" @click="show = !show" key="menu">menu</i>
-                        <i class="material-icons clear" v-else @click="show = !show" key="clear">clear</i>
+                        <div class="gaalsien-select-menu-a" v-if="!show" @click="show = !show" key="menu"><h2>Select Gaalsien unit</h2></div>
+                        <div class="gaalsien-select-menu-b" v-else @click="show = !show" key="clear"><h2>Close Gaalsien menu</h2></div>
                     </transition>
                     <transition name="fade">
                         <ul class="list-grid" v-if="show">
@@ -37,7 +37,25 @@
                             </li>
                         </ul>
                     </transition>
-                    <div id="unitSelect" :is="currentComponent"></div>
+                    <div class="unit-container">
+                        <div id="unitSelect" :is="currentComponent"></div>
+                    </div>
+                </section>
+                <section class="coalition" id="coalition">
+                    <transition name="fade" mode="out-in">
+                        <div class="coalition-select-menu-a" v-if="!show" @click="show = !show" key="menu"><h2>Select Coalition unit</h2></div>
+                        <div class="coalition-select-menu-b" v-else @click="show = !show" key="clear"><h2>Close Coalition menu</h2></div>
+                    </transition>
+                    <transition name="fade">
+                        <ul class="list-grid" v-if="show">
+                            <li v-for="component in componentsArray">
+                                <div @click="swapComponent(component)"> {{ component }} </div>
+                            </li>
+                        </ul>
+                    </transition>
+                    <div class="unit-container">
+                        <div id="unitSelect" :is="currentComponent"></div>
+                    </div>
                 </section>
             </main>
         </section>
@@ -51,7 +69,7 @@
 <!-- For for unit components. -->
 <template id="aav">
     <div class="unitInfo">
-        <figure>
+        <figure class="unitImage">
             <img src="images/coalitionUnits/AAV_coalition.jpg"/>
             <figcaption> <h2> coalition AAV </h2> </figcaption>
         </figure>
@@ -86,7 +104,7 @@
 
 <template id="artillery-cruiser">
     <div class="unitInfo">
-        <figure>
+        <figure class="unitImage">
             <img src="images/coalitionUnits/artilleryCruiser_coalition.jpg"/>
             <figcaption> <h2> coalition artillery cruiser </h2> </figcaption>
         </figure>
@@ -121,7 +139,7 @@
 
 <template id="assault-cruiser">
     <div class="unitInfo">
-        <figure>
+        <figure class="unitImage">
             <img src="images/coalitionUnits/assaultCruiser_coalition.jpg"/>
             <figcaption> <h2> coalition assault cruiser </h2> </figcaption>
         </figure>
@@ -156,7 +174,7 @@
 
 <template id="baserunner">
     <div class="unitInfo">
-        <figure>
+        <figure class="unitImage">
             <img src="images/coalitionUnits/baserunner_coalition.jpg"/>
             <figcaption> <h2> coalition baserunner </h2> </figcaption>
         </figure>
@@ -190,7 +208,7 @@
 
 <template id="battle-cruiser">
     <div class="unitInfo">
-        <figure>
+        <figure class="unitImage">
             <img src="images/coalitionUnits/battleCruiser_coalition.jpg" />
             <figcaption> <h2> coalition battleCruiser </h2> </figcaption>
         </figure>
@@ -232,7 +250,7 @@
 
 <template id="carrier">
     <div class="unitInfo">
-        <figure>
+        <figure class="unitImage">
             <img src="images/coalitionUnits/carrier_coalition.jpg" />
             <figcaption> <h2> coalition carrier </h2> </figcaption>
         </figure>
@@ -274,7 +292,7 @@
 
 <template id="gunship">
     <div class="unitInfo">
-        <figure>
+        <figure class="unitImage">
             <img src="images/coalitionUnits/gunship_coalition.jpg" />
             <figcaption> <h2> coalition gunship </h2> </figcaption>
         </figure>
@@ -316,7 +334,7 @@
 
 <template id="lav">
     <div class="unitInfo">
-        <figure>
+        <figure class="unitImage">
             <img src="images/coalitionUnits/LAV_coalition.jpg" />
             <figcaption> <h2> coalition LAV </h2> </figcaption>
         </figure>
@@ -358,7 +376,7 @@
 
 <template id="missile-battery">
     <div class="unitInfo">
-        <figure>
+        <figure class="unitImage">
             <img src="images/coalitionUnits/missileBattery_coalition.jpg" />
             <figcaption> <h2> coalition missile battery </h2> </figcaption>
         </figure>
@@ -400,7 +418,7 @@
 
 <template id="railgun">
     <div class="unitInfo">
-        <figure>
+        <figure class="unitImage">
             <img src="images/coalitionUnits/railgun_coalition.jpg" />
             <figcaption> <h2> coalition railgun </h2> </figcaption>
         </figure>
@@ -442,7 +460,7 @@
 
 <template id="salvager">
     <div class="unitInfo">
-        <figure>
+        <figure class="unitImage">
             <img src="images/coalitionUnits/salvager_coalition.jpg" />
             <figcaption><h2> coalition salvager </h2> </figcaption>
         </figure>
@@ -484,7 +502,7 @@
 
 <template id="strike-fighter">
     <div class="unitInfo">
-        <figure>
+        <figure class="unitImage">
             <img src="images/coalitionUnits/interceptor_coalition.jpg" />
             <figcaption><h2> coalition interceptor </h2> </figcaption>
         </figure>
@@ -526,7 +544,7 @@
 
 <template id="support-cruiser">
     <div class="unitInfo">
-        <figure>
+        <figure class="unitImage">
             <img src="images/coalitionUnits/supportCruiser_coalition.jpg" />
             <figcaption> <h2> coalition support cruiser </h2> </figcaption>
         </figure>
@@ -568,7 +586,7 @@
 
 <template id="tactical-bomber">
     <div class="unitInfo">
-        <figure>
+        <figure class="unitImage">
             <img src="images/coalitionUnits/bomber_coalition.jpg" />
             <figcaption> <h2> coalition bomber </h2> </figcaption>
         </figure>

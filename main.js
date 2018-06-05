@@ -98,83 +98,41 @@ var unitView= new Vue({
     }
 });
 
-// new Vue({
-//     el: '#coalitionSelect',
-//     data: {
-//         currentComponent: 'AAV',
-//         componentsArray: [
-//             'AAV', 'ArtilleryCruiser', 'AssaultCruiser', 'Baserunner', 'BattleCruiser', 'Carrier', 'Gunship', 'LAV', 'MissileBattery', 'Railgun', 'Salvager', 'StrikeFighter', 'SupportCruiser','TacticalBomber'
-//         ],
-//
-//     },
-//     components: {
-//         'AAV': {
-//             template:
-//             ''
-//         },
-//         'ArtilleryCruiser': {
-//             template:
-//             '<div class="gaalsienCompare" id="gaalsienCompare">  </div>'
-//         },
-//         'AssaultCruiser': {
-//             template:
-//             '<div class="gaalsienCompare" id="gaalsienCompare">  </div>'
-//         },
-//         'Baserunner': {
-//             template:
-//             '<div class="gaalsienCompare" id="gaalsienCompare">  </div>'
-//         },
-//         'BattleCruiser': {
-//             template:
-//             '<div class="gaalsienCompare" id="gaalsienCompare">  </div>'
-//         },
-//         'Carrier': {
-//             template:
-//             '<div class="gaalsienCompare" id="gaalsienCompare">  </div>'
-//         },
-//         'Gunship': {
-//             template:
-//             '<div class="gaalsienCompare" id="gaalsienCompare">  </div>'
-//         },
-//         'LAV': {
-//             template:
-//             '<div class="gaalsienCompare" id="gaalsienCompare">  </div>'
-//         },
-//         'MissileBattery': {
-//             template:
-//             '<div class="gaalsienCompare" id="gaalsienCompare">  </div>'
-//         },
-//         'Railgun': {
-//             template:
-//             '<div class="gaalsienCompare" id="gaalsienCompare">  </div>'
-//         },
-//         'Salvager': {
-//             template:
-//             '<div class="gaalsienCompare" id="gaalsienCompare">  </div>'
-//         },
-//         'StrikeFighter': {
-//             template:
-//             '<div class="gaalsienCompare" id="gaalsienCompare">  </div>'
-//         },
-//         'SupportCruiser': {
-//             template:
-//             '<div class="gaalsienCompare" id="gaalsienCompare">  </div>'
-//         },
-//         'TacticalBomber': {
-//             template:
-//             '<div class="gaalsienCompare" id="gaalsienCompare">  </div>'
-//         },
-//     },
-//     methods: {
-//         swapComponent: function(component) {
-//             if (this.currentComponent === component) {
-//                 this.currentComponent = null;
-//             } else {
-//                 this.currentComponent = component;
-//             }
-//         }
-//     }
-// });
+var unitView= new Vue({
+    el: '#coalition',
+    data: {
+        currentComponent: null,
+        componentsArray: [
+            'AAV', 'ArtilleryCruiser', 'AssaultCruiser', 'Baserunner', 'BattleCruiser',  'Carrier', 'Gunship', 'LAV', 'MissileBattery', 'Railgun', 'Salvager', 'StrikeFighter', 'SupportCruiser', 'TacticalBomber',
+        ],
+        show: false,
+    },
+    components: {
+        'AAV': galAAV,
+        'ArtilleryCruiser': galArtCruiser,
+        'AssaultCruiser': galAssCruiser,
+        'Baserunner': galBaserunner,
+        'BattleCruiser': galBatCruiser,
+        'Carrier': galCarrier,
+        'Gunship': galGunship,
+        'LAV': galLAV,
+        'MissileBattery': galMisBattery,
+        'Railgun': galRailgun,
+        'Salvager': galSalvager,
+        'StrikeFighter': galStrFighter,
+        'SupportCruiser': galSupCruiser,
+        'TacticalBomber': galTacBomber,
+    },
+    methods: {
+        swapComponent: function(component) {
+            if (this.currentComponent === component) {
+                this.currentComponent = null;
+            } else {
+                this.currentComponent = component;
+            }
+        }
+    }
+});
 
 // images: [
 //     { url: 'images/coalitionUnits/AAV_coalition.jpg', alt: 'coalition AAV' },
