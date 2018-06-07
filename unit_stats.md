@@ -116,107 +116,107 @@
 
 **Gaalsien**
 
-+ AAV
-    - Speed:
-    - Armor:
-    - Damage:
-    - Rate of Fire:
-    - Hull:
-    - Strong vs:
-    - Weak vs:
-+ AssaultCruiser
-    - Speed:
-    - Armor:
-    - Damage:
-    - Rate of Fire:
-    - Hull:
-    - Strong vs:
-    - Weak vs:
++ AssaultRailgun
+    - Speed: 100
+    - Armor: 6
+    - Damage: 50
+    - Rate of Fire: High
+    - Hull: 550
+    - Strong vs: Armored, Railguns
+    - Weak vs: Railguns, Aircraft, Cruisers
++ AssaultShip
+    - Speed: 70
+    - Armor: 6
+    - Damage: 24
+    - Rate of Fire: Medium
+    - Hull: 1400
+    - Strong vs: Strikecraft
+    - Weak vs: Railguns, Cruisers
 + Baserunner
-    - Speed:
-    - Armor:
-    - Damage:
-    - Rate of Fire:
-    - Hull:
-    - Strong vs:
-    - Weak vs:
-+ BattleCruiser
-    - Speed:
-    - Armor:
-    - Damage:
-    - Rate of Fire:
-    - Hull:
-    - Strong vs:
-    - Weak vs:
-+ Bomber
-    - Speed:
-    - Armor:
-    - Damage:
-    - Rate of Fire:
-    - Hull:
-    - Strong vs:
-    - Weak vs:
+    - Speed: 70
+    - Armor: 2
+    - Damage: 5
+    - Rate of Fire: Low
+    - Hull: 3350
+    - Strong vs: N/A
+    - Weak vs: Everything
 + Carrier
-    - Speed:
-    - Armor:
-    - Damage:
-    - Rate of Fire:
-    - Hull:
-    - Strong vs:
-    - Weak vs:
-+ Gunship
-    - Speed:
-    - Armor:
-    - Damage:
-    - Rate of Fire:
-    - Hull:
-    - Strong vs:
-    - Weak vs:
+    - Speed: 10
+    - Armor: 40
+    - Damage: 10
+    - Rate of Fire: Very low
+    - Hull: 12500
+    - Strong vs: N/A
+    - Weak vs: Railguns, Cruisers
++ HeavyRailgun
+    - Speed: 62
+    - Armor: 3
+    - Damage: 225
+    - Rate of Fire: Medium
+    - Hull: 620
+    - Strong vs: Armored, Railguns
+    - Weak vs: Railguns, Aircraft, Cruisers
++ HonorguardCruiser
+    - Speed: 60
+    - Armor: 6
+    - Damage: 400
+    - Rate of Fire: Medium
+    - Hull: 3600
+    - Strong vs: Ground
+    - Weak vs: Aircraft, Railguns
 + Interceptor
-    - Speed:
-    - Armor:
-    - Damage:
-    - Rate of Fire:
-    - Hull:
-    - Strong vs:
-    - Weak vs:
-+ LAV
-    - Speed:
-    - Armor:
-    - Damage:
-    - Rate of Fire:
-    - Hull:
-    - Strong vs:
-    - Weak vs:
-+ MissileBattery
-    - Speed:
-    - Armor:
-    - Damage:
-    - Rate of Fire:
-    - Hull:
-    - Strong vs:
-    - Weak vs:
-+ Railgun
-    - Speed:
-    - Armor:
-    - Damage:
-    - Rate of Fire:
-    - Hull:
-    - Strong vs:
-    - Weak vs:
+    - Speed: 435
+    - Armor: 1
+    - Damage: 150
+    - Rate of Fire: Medium
+    - Hull: 475
+    - Strong vs: Ground
+    - Weak vs: Anti-air, Interceptors, Strikecraft
++ MissileShip
+    - Speed: 55
+    - Armor: 5
+    - Damage: 250
+    - Rate of Fire: Low
+    - Hull: 1800
+    - Strong vs: Aircraft
+    - Weak vs: Ground units
++ PrecisionBomber
+    - Speed: 550
+    - Armor: 15
+    - Damage: 1000
+    - Rate of Fire: Low
+    - Hull: 1250
+    - Strong vs: Ground
+    - Weak vs: Anti-air, Interceptors, Strikecraft
++ ProductionCruiser
+    - Speed: 70
+    - Armor: 5
+    - Damage: 20
+    - Rate of Fire: Low
+    - Hull: 4100
+    - Strong vs: N/A
+    - Weak vs: Everything
 + Salvager
-    - Speed:
-    - Armor:
-    - Damage:
-    - Rate of Fire:
-    - Hull:
-    - Strong vs:
-    - Weak vs:
-+ SupportCruiser
-    - Speed:
-    - Armor:
-    - Damage:
-    - Rate of Fire:
-    - Hull:
-    - Strong vs:
-    - Weak vs:
+    - Speed: 75
+    - Armor: 2
+    - Damage: 0
+    - Rate of Fire: N/A
+    - Hull: 900
+    - Strong vs: N/A
+    - Weak vs: Everything
++ Sandskimmer
+    - Speed: 130
+    - Armor: 0
+    - Damage: 15
+    - Rate of Fire: Medium
+    - Hull: 650
+    - Strong vs: Strikecraft, Railguns
+    - Weak vs: AAVs, Cruisers
++ SiegeCruiser
+    - Speed: 55
+    - Armor: 3
+    - Damage: 100
+    - Rate of Fire: Low
+    - Hull: 2500
+    - Strong vs: Ground
+    - Weak vs: Strikecraft, Railguns

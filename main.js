@@ -1,91 +1,141 @@
 //Create components
-
-var galAAV = Vue.component('aav',{
+//Coalition components
+var colAAV = Vue.component('aav',{
     template: '#aav',
 });
 
-var galArtCruiser = Vue.component('artillery-cruiser',{
+var colArtCruiser = Vue.component('artillery-cruiser',{
     template: '#artillery-cruiser',
 });
 
-var galAssCruiser = Vue.component('assault-cruiser',{
+var colAssCruiser = Vue.component('assault-cruiser',{
     template: '#assault-cruiser',
 });
 
-var galBaserunner = Vue.component('baserunner',{
+var colBaserunner = Vue.component('baserunner',{
     template: '#baserunner',
 });
 
-var galBatCruiser = Vue.component('battle-cruiser',{
+var colBatCruiser = Vue.component('battle-cruiser',{
     template: '#battle-cruiser',
 });
 
-var galCarrier = Vue.component('carrier',{
+var colCarrier = Vue.component('carrier',{
     template: '#carrier',
 });
 
-var galGunship = Vue.component('gunship',{
+var colGunship = Vue.component('gunship',{
     template: '#gunship',
 });
 
-var galLAV = Vue.component('lav',{
+var colLAV = Vue.component('lav',{
     template: '#lav',
 });
 
-var galMisBattery = Vue.component('missile-battery',{
+var colMisBattery = Vue.component('missile-battery',{
     template: '#missile-battery',
 });
 
-var galRailgun = Vue.component('railgun',{
+var colRailgun = Vue.component('railgun',{
     template: '#railgun',
 });
 
-var galSalvager = Vue.component('salvager',{
+var colSalvager = Vue.component('salvager',{
     template: '#salvager',
 });
 
-var galStrFighter = Vue.component('strike-fighter',{
+var colStrFighter = Vue.component('strike-fighter',{
     template: '#strike-fighter',
 });
 
-var galSupCruiser = Vue.component('support-cruiser',{
+var colSupCruiser = Vue.component('support-cruiser',{
     template: '#support-cruiser',
 });
 
-var galTacBomber = Vue.component('tactical-bomber',{
+var colTacBomber = Vue.component('tactical-bomber',{
     template: '#tactical-bomber',
 });
 
 
+
+//Gaalsien components
+var galAssRailgun = Vue.component('aav',{
+    template: '#assault-railgun-gaalsien',
+});
+
+var galAssShip = Vue.component('artillery-cruiser',{
+    template: '#assault-ship-gaalsien',
+});
+
+var galBaserunner = Vue.component('baserunner',{
+    template: '#baserunner-gaalsien',
+});
+
+var galCarrier = Vue.component('carrier',{
+    template: '#carrier-gaalsien',
+});
+
+var galHvyRailgun = Vue.component('assault-cruiser',{
+    template: '#heavy-railgun-gaalsien',
+});
+
+var galHonCruiser = Vue.component('battle-cruiser',{
+    template: '#honorguard-cruiser-gaalsien',
+});
+
+var galInterceptor = Vue.component('gunship',{
+    template: '#interceptor-gaalsien',
+});
+
+var galMisShip = Vue.component('lav',{
+    template: '#missile-ship-gaalsien',
+});
+
+var galPreBomber = Vue.component('missile-battery',{
+    template: '#precision-bomber-gaalsien',
+});
+
+var galProCruiser = Vue.component('railgun',{
+    template: '#production-cruiser-gaalsien',
+});
+
+var galSalvager = Vue.component('salvager',{
+    template: '#salvager-gaalsien',
+});
+
+var galSandskimmer = Vue.component('strike-fighter',{
+    template: '#sandskimmer-gaalsien',
+});
+
+var galSieCruiser = Vue.component('support-cruiser',{
+    template: '#siege-cruiser-gaalsien',
+});
+
 // Create new Vue instance for gaalsien-dropdown.
-// var galDropdown = new Vue({
-//   el: '#dropdown1'
-// });
 
 var unitView= new Vue({
     el: '#gaalsien',
     data: {
         currentComponent: null,
         componentsArray: [
-            'AAV', 'ArtilleryCruiser', 'AssaultCruiser', 'Baserunner', 'BattleCruiser',  'Carrier', 'Gunship', 'LAV', 'MissileBattery', 'Railgun', 'Salvager', 'StrikeFighter', 'SupportCruiser', 'TacticalBomber',
+            'AssaultRailgun', 'AssaultShip', 'Baserunner', 'Carrier', 'HeavyRailgun', 'HonorguardCruiser', 'Interceptor', 'MissileShip', 'PrecisionBomber', 'ProductionCruiser', 'Salvager', 'Sandskimmer', 'SiegeCruiser',
         ],
         show: false,
     },
     components: {
-        'AAV': galAAV,
-        'ArtilleryCruiser': galArtCruiser,
-        'AssaultCruiser': galAssCruiser,
+        'AssaultRailgun': galAssRailgun,
+        'AssaultShip': galAssShip,
         'Baserunner': galBaserunner,
-        'BattleCruiser': galBatCruiser,
         'Carrier': galCarrier,
-        'Gunship': galGunship,
-        'LAV': galLAV,
-        'MissileBattery': galMisBattery,
-        'Railgun': galRailgun,
+        'HeavyRailgun': galHvyRailgun,
+        'HonorguardCruiser': galHonCruiser,
+        'Interceptor': galInterceptor,
+        'MissileShip': galMisShip,
+        'PrecisionBomber': galPreBomber,
+        'ProductionCruiser': galProCruiser,
         'Salvager': galSalvager,
-        'StrikeFighter': galStrFighter,
-        'SupportCruiser': galSupCruiser,
-        'TacticalBomber': galTacBomber,
+        'Sandskimmer': galSandskimmer,
+        'SiegeCruiser': galSieCruiser,
     },
     methods: {
         swapComponent: function(component) {
@@ -108,20 +158,20 @@ var unitView= new Vue({
         show: false,
     },
     components: {
-        'AAV': galAAV,
-        'ArtilleryCruiser': galArtCruiser,
-        'AssaultCruiser': galAssCruiser,
-        'Baserunner': galBaserunner,
-        'BattleCruiser': galBatCruiser,
-        'Carrier': galCarrier,
-        'Gunship': galGunship,
-        'LAV': galLAV,
-        'MissileBattery': galMisBattery,
-        'Railgun': galRailgun,
-        'Salvager': galSalvager,
-        'StrikeFighter': galStrFighter,
-        'SupportCruiser': galSupCruiser,
-        'TacticalBomber': galTacBomber,
+        'AAV': colAAV,
+        'ArtilleryCruiser': colArtCruiser,
+        'AssaultCruiser': colAssCruiser,
+        'Baserunner': colBaserunner,
+        'BattleCruiser': colBatCruiser,
+        'Carrier': colCarrier,
+        'Gunship': colGunship,
+        'LAV': colLAV,
+        'MissileBattery': colMisBattery,
+        'Railgun': colRailgun,
+        'Salvager': colSalvager,
+        'StrikeFighter': colStrFighter,
+        'SupportCruiser': colSupCruiser,
+        'TacticalBomber': colTacBomber,
     },
     methods: {
         swapComponent: function(component) {
